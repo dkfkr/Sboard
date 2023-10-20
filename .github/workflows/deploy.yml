@@ -30,7 +30,7 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
-          distribution: 'oracle'
+          distribution: 'HeidiSQL'
           java-version: '17'
 
       # application.properties를 프로젝트에 포함
