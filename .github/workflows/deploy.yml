@@ -26,9 +26,9 @@ jobs:
 
     steps:
      # 작업에서 액세스할 수 있도록 $GITHUB_WORKSPACE에서 저장소를 체크아웃합니다.
-      - uses: actions/checkout@s3
+      - uses: actions/checkout@v3
       - name: Set up JDK 17
-        uses: actions/setup-java@s3
+        uses: actions/setup-java@v3
         with:
           distribution: 'Oracle'
           java-version: '17'
@@ -45,7 +45,7 @@ jobs:
         
       # yml 파일일 경우 : yml 파일의 내용을 Base64로 인코딩해야됨(https://www.convertstring.com)
        name: copy Application.yml
-       run: echo "${{ secrets.APP_PROPERTIES }}" > ./src/main/resources/application.properties
+       run: echo "${{ secrets.APP_PROPERTIES }}" > ./src/main/resources/application.yml
        shell: bash
         
       # gradle 권한 설정
